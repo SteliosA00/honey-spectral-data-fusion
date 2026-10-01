@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[26]:
-
-
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -17,8 +11,8 @@ def load_and_preprocess(file_path):
     return df
 
 # Load datasets
-df1 = load_and_preprocess('C:\\Users\\steli\\OneDrive\\Desktop\\DATASET\\honey_uvvis.csv')
-df2 = load_and_preprocess('C:\\Users\\steli\\OneDrive\\Desktop\\DATASET\\honey_ftir.csv')
+df1 = load_and_preprocess('honey_uvvis.csv')
+df2 = load_and_preprocess('honey_ftir.csv')
 
 # Align datasets to ensure same samples
 df1, df2 = df1.align(df2, join='inner', axis=0)
@@ -60,14 +54,9 @@ y_pred_botanical = rf_botanical.predict(X_test)
 print("Botanical classification report:")
 print(classification_report(y_test_botanical, y_pred_botanical))
 
-
 y_pred_geographical = rf_geographical.predict(X_test)
 print("Geographical classification report:")
 print(classification_report(y_test_geographical, y_pred_geographical))
-
-
-# In[ ]:
-
 
 
 
