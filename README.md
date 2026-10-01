@@ -27,10 +27,15 @@ The datasets were collected from a honey production facility for a PhD thesis an
 All experiments share the same base pipeline:
 
 1)Load and preprocess: remove non-informative columns and separate features from labels.
+
 2)Normalize: standardize features so that all have the same scale.
+
 3)Dimensionality reduction: Principal Component Analysis (PCA), keeping 95% of the variance.
+
 4)Split: divide the data into training and test sets.
+
 5)Classify: train a Random Forest classifier, separately for the geographical and the botanical target.
+
 6)Evaluate: report accuracy and the classification report (including F1-score) on the test set.
 
 # Data Fusion Techniques
