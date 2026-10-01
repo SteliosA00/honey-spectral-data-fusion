@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -79,10 +73,3 @@ print(classification_report(y_test_botanical, final_pred_botanical))
 
 print("Geographical classification report (Decision-Level Fusion):")
 print(classification_report(y_test_geographical, final_pred_geographical))
-
-
-# In[ ]:
-
-
-
-
